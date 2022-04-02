@@ -16,6 +16,8 @@
 * C-x 3 spilts the selected window into two windows that are side by side 
 * C-x o choose a windows 
 * C-M-S-v chooses next window downward 
+* C-x 0 Delete window
+* C-x 1 Delete other window and keep the one selected 
 
 ### Terminal Emulation
 * M-! cmd RET Single Line Command 
