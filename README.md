@@ -22,6 +22,8 @@
 ### Terminal Emulation
 * M-! cmd RET Single Line Command 
 * M-x shell Creates a Terminal within emacs using a buffer 
+* M-p like the up arrow key 
+* M-n like the down arrow key
 
 ### File Navigation 
 * C-x C-f find file
