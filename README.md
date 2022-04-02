@@ -1,2 +1,7 @@
-# emacs
-This is a Doc for storing all of my emacs configs
+# Emacs Configs 
+ 
+## Basic Keybinds for Daily Use 
+
+### Movement 
+*C-x [right] Next Buffer
+*C-x [left] Previous Buffer 
