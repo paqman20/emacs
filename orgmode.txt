@@ -1,4 +1,4 @@
 
-* Basic Org Commands
+# Basic Org Commands
 
-** org-inster-link 
+* org-inster-link instert a link into the highligthed text 
