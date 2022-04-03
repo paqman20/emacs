@@ -2,3 +2,4 @@
 # Basic Org Commands
 
 * org-inster-link instert a link into the highligthed text 
+* org-open-point allow to access extarnel link 
