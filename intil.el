@@ -1,10 +1,8 @@
 ; packages to be automatically installed 
-(setq package-list '(org dracula))
+(setq package-list '(org ))
 
 ; repostioryes contaning the packages
-(setq package-archives '(("elpa" . "http://tromey.com/elpa/")
-                         ("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 			 ("melpa" . "https://melpa.org/packages/")))
 
 ;; activate all the packages
@@ -80,8 +78,8 @@ File Navigation
 ")
 
 ;; Setting emacs to our custom theme dracula 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'dracula t)
+;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+;(load-theme 'dracula t)
 
 ;; Removing bloat from startup 
 (menu-bar-mode -1) 
