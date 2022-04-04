@@ -1,5 +1,5 @@
 ; packages to be automatically installed 
-(setq package-list '(org))
+(setq package-list '(org dracula))
 
 ; repostioryes contaning the packages
 (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
