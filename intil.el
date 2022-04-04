@@ -1,7 +1,10 @@
 ; packages to be automatically installed 
 (setq package-list '(org ))
 
-; repostioryes contaning the packages
+;;This is required by melpa im not really sure 
+(require 'package)
+
+;; repostioryes contaning the packages
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 			 ("melpa" . "https://melpa.org/packages/")))
 
