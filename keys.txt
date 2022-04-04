@@ -1,0 +1,22 @@
+Movement Buffers
+* C-x [right] Next Buffer 
+* C-x [left] Previous Buffer 
+Buffers Managerment 
+* C-x b buffer RET Select or create buffeer named RET 
+* C-x C-b List all Buffers 
+* C-x k buffer RET Kill buffer named RET 
+Window Managerment 
+* C-x 2 splits the selected windows into two windows that are one above the others 
+* C-x 3 spilts the selected window into two windows that are side by side 
+* C-x o choose a windows 
+* C-M-S-v chooses next window downward 
+* C-x 0 Delete window
+* C-x 1 Delete other window and keep the one selected 
+Terminal Emulation
+* M-! cmd RET Single Line Command 
+* M-x shell Creates a Terminal within emacs using a buffer 
+* M-p like the up arrow key 
+* M-n like the down arrow key
+File Navigation 
+* C-x C-f find file
+* C-x C-w write file 
