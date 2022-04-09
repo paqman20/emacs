@@ -1,0 +1,95 @@
+* Emacs Configurations 
+* Packages
+   #+begin_src emacs-lisp
+
+     ; packages to be automatically installed 
+     (setq package-list '(org exwm ))
+
+     ; repostioryes contaning the packages
+     (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+			      ("melpa" . "https://melpa.org/packages/")))
+
+     ;; activate all the packages
+     (package-initialize)
+
+     ;; fetch the list of packages available 
+     (unless package-archive-contents
+       (package-refresh-contents))
+
+     ;; install the missing packages
+     (dolist (package package-list)
+       (unless (package-installed-p package)
+	 (package-install package)))
+
+    #+end_src
+* Initial Scratch Message
+  #+begin_src emacs-lisp
+	(setq initial-scratch-message "
+	;;      Petr Quinns Customized Emacs system 
+	;;      guarded by Willy Coyote  
+	    ....
+		 ,''. :   __
+		     \|_.'  `:       _.----._//_
+		    .'  .'.`'-._   .'  _/ -._ \)-.----O
+		   '._.'.'      '--''-'._   '--..--'-`
+		    .'.'___    /`'---'. / ,-'`
+		 _<__.-._))../ /'----'/.'_____:'.
+	   \_    :            \ ]              :  '.
+	     \___:             \\              :    '.
+		 :              \\__           :    .'
+		 :_______________|__]__________:  .'
+			    .' __ '.           :.'
+			  .' .'  '. '.
+			.' .'      '. '.
+		      .' .'          '. '.
+		   _.' .'______________'. '._
+		  [_0______________________0_]
+	_______________________________________________
+
+
+    ")
+
+
+  #+end_src
+
+* Theme
+  #+begin_src emacs-lisp
+    (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+    (load-theme 'dracula t)
+
+  #+end_src 
+
+* Removing Startup Bloat
+  #+begin_src emacs-lisp
+
+    (menu-bar-mode -1) 
+    (tool-bar-mode -1) 
+    (scroll-bar-mode -1)
+    (setq inhibit-splash-screen t)
+
+
+  #+end_src
+
+* Y/N Anwsers
+
+  #+begin_src emacs-lisp
+    (defalias 'yes-or-no-p 'y-or-n-p)
+
+  #+end_src
+   
+* Keybinds
+** Org Keybinds
+   #+begin_src emacs-lisp
+     (global-set-key (kbd "C-c l") 'org-store-link)
+     (global-set-key (kbd "C-c a") 'org-agenda)
+     (global-set-key (kbd "C-c c") 'org-capture)
+
+   #+end_src 
+
+* Outplacing to Custom.el
+  #+begin_src emacs-lisp
+    (setq custom-file "~/.emacs.d/custom.el")
+    (load custom-file)
+
+  #+end_src 
+
