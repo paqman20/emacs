@@ -78,8 +78,8 @@ File Navigation
 ")
 
 ;; Setting emacs to our custom theme dracula 
-;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-;(load-theme 'dracula t)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'dracula t)
 
 ;; Removing bloat from startup 
 (menu-bar-mode -1) 
