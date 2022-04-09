@@ -93,3 +93,12 @@
 
   #+end_src 
 
+* Org Mode
+** Structure managerment
+
+   #+begin_src emacs-lisp
+     
+     (require 'org-tempo)  
+     (add-to-list 'org-structure-template-alist '("sh" . "src shell"))
+     (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))		
+   #+end_src 
