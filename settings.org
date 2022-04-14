@@ -85,12 +85,21 @@
      (global-set-key (kbd "C-c c") 'org-capture)
 
    #+end_src 
+** Keybinds
+   #+begin_src emacs-lisp
+     ;; To start Applications ins EXWM
+     (global-set-key (kbd "M-a") 'async-shell-command)
+
+     ;; To stop trying to fill colum or whatever bullshit
+     (global-set-key (kbd "C-x f") ' find-file)
+
+
+     #+end_src
 
 * Outplacing to Custom.el
   #+begin_src emacs-lisp
     (setq custom-file "~/.emacs.d/custom.el")
     (load custom-file)
-
   #+end_src 
 
 * Org Mode
@@ -102,3 +111,13 @@
      (add-to-list 'org-structure-template-alist '("sh" . "src shell"))
      (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))		
    #+end_src 
+
+  
+* EXWM
+** Base Keybinds
+   #+begin_src emacs-lisp
+     (require 'exwm)
+     (require 'exwm-config)
+     (exwm-config-default)
+
+   #+end_src
