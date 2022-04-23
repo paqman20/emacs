@@ -1,9 +1,10 @@
+
 * Emacs Configurations 
 * Packages
    #+begin_src emacs-lisp
 
      ; packages to be automatically installed 
-     (setq package-list '(org ))
+     (setq package-list '(org exwm))
 
      ; repostioryes contaning the packages
      (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
@@ -95,7 +96,10 @@
 
 
      #+end_src
-
+**  Window Movemnt
+   #+begin_src emacs-lisp
+     (windmove-default-keybindings)
+   #+end_src
 * Outplacing to Custom.el
   #+begin_src emacs-lisp
     (setq custom-file "~/.emacs.d/custom.el")
@@ -120,4 +124,10 @@
      (require 'exwm-config)
      (exwm-config-default)
 
+     ;; These keys should allways pass through to exwm
+     (setq exwm-input-prefix-keys
+	   '(?\C-x
+	    ?\M-x))
+
    #+end_src
+
