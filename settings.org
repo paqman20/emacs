@@ -1,12 +1,13 @@
 
+
 * Emacs Configurations 
 * Packages
    #+begin_src emacs-lisp
 
      ; packages to be automatically installed 
-     (setq package-list '(org exwm))
+     (setq package-list '(org exwm sudo-edit))
 
-     ; repostioryes contaning the packages
+     ; Repostioryes contaning the packages
      (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 			      ("melpa" . "https://melpa.org/packages/")))
 
@@ -88,14 +89,17 @@
    #+end_src 
 ** Keybinds
    #+begin_src emacs-lisp
-     ;; To start Applications ins EXWM
-     (global-set-key (kbd "M-a") 'async-shell-command)
+    ;; To start Applications ins EXWM
+    (global-set-key (kbd "M-a") 'async-shell-command)
 
-     ;; To stop trying to fill colum or whatever bullshit
-     (global-set-key (kbd "C-x f") ' find-file)
+    ;; To stop trying to fill colum or whatever bullshit
+    (global-set-key (kbd "C-x f") ' find-file)
+    ;; Trying to find a way to actually use emacs everywhere sudo-edit
+    (global-set-key (kbd "M-s e") ' sudo-edit)
 
 
      #+end_src
+
 **  Window Movemnt
    #+begin_src emacs-lisp
      (windmove-default-keybindings)
@@ -106,8 +110,7 @@
     (load custom-file)
   #+end_src 
 
-* Org Mode
-** Structure managerment
+* Org Mode** Structure managerment
 
    #+begin_src emacs-lisp
      
@@ -116,18 +119,23 @@
      (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))		
    #+end_src 
 
-  
-* EXWM
-** Base Keybinds
+* EXWM*
+* Base Keybinds
    #+begin_src emacs-lisp
-     (require 'exwm)
-     (require 'exwm-config)
-     (exwm-config-default)
+     ;(require 'exwm)
+     ;(require 'exwm-config)
+     ;(exwm-config-default)
 
      ;; These keys should allways pass through to exwm
-     (setq exwm-input-prefix-keys
-	   '(?\C-x
-	    ?\M-x))
+     ;(setq exwm-input-prefix-keys
+	  ; '(?\C-x
+	  ;  ?\M-x))
 
    #+end_src
+
+* Stop Backups
+#+begin_src emacs-lisp
+  (setq make-backup-files nil)
+  
+#+end_src
 
